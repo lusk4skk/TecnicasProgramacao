@@ -14,7 +14,7 @@ public class Main {
 		case 1:
 			double c;
 			System.out.println("Digite o comprimento do quadrado: ");
-			c = scan.nextInt();
+			c = scan.nextDouble();
 			
 			double R1 = Math.pow(c, 2);
 			System.out.println(R1);
@@ -23,14 +23,14 @@ public class Main {
 		case 2:
 			double r;
 			System.out.println("Digite o raio do círculo: ");
-			r = scan.nextInt();
+			r = scan.nextDouble();
 			
 			double R2 = (3.14 * Math.pow(r, 2));
 			System.out.println(R2);
 			break;
 		}
 		
-			
+		scan.close();
 
 	}
 

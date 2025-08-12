@@ -21,6 +21,8 @@ public class Main {
 		} else {
 			System.out.println("Ambos os valores (" + num1 + ") são iguais.");
 		}
+		
+		scan.close();
 
 	}
 

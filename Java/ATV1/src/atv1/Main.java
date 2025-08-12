@@ -9,7 +9,7 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Digite o valor: ");
-		num = scan.nextInt();
+		num = scan.nextDouble();
 		
 		if (num > 0) {
 			System.out.println("O valor é positivo");
@@ -18,6 +18,8 @@ public class Main {
 		} else {
 			System.out.println("O valor é nulo (igual a zero)");
 		}
+		
+		scan.close();
 
 	}
 
