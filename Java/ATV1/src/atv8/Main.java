@@ -16,8 +16,7 @@ public class Main {
 		
 		for (int i = 0; i < n; i++) {
 			impares[i] = imp;
-			imp++;
-			imp++;
+			imp+=2;
 		}
 		
 		for (int i = 0; i < impares.length; i++) {
