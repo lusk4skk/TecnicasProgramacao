@@ -1,4 +1,4 @@
-package atv_em_sala;
+package atv1;
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +12,7 @@ public class Main {
 		
 		meuCarro.cor = "Rosa";
 		meuCarro.modelo = "Renault Kwid";
-		meuCarro.tanque = 10;
+		meuCarro.tanque = 38;
 		
 		System.out.println("O modelo do meu carro é: " + meuCarro.modelo);
 		System.out.println("A cor do meu carro é: " + meuCarro.cor);
