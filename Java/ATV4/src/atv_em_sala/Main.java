@@ -10,15 +10,21 @@ public class Main {
 		boolean program = true;
 		Carro meuCarro = new Carro();
 		
-		meuCarro.marca = "Renault";
-		meuCarro.modelo = "Kwid";
-		meuCarro.ano = 2025;
+		meuCarro.cor = "Rosa";
+		meuCarro.modelo = "Renault Kwid";
+		meuCarro.tanque = 10;
 		
-		System.out.println("O ano do meu carro é: " + meuCarro.ano);
-		System.out.println("A marca do meu carro é: " + meuCarro.marca);
 		System.out.println("O modelo do meu carro é: " + meuCarro.modelo);
+		System.out.println("A cor do meu carro é: " + meuCarro.cor);
+		System.out.println("A capacidade do tanque do meu carro é: " + meuCarro.tanque);
 		System.out.println("");
-		System.out.println("Escolha o que fazer: \n1. Ligar\n2. Desligar\n3. Acelerar\n0. Fechar programa\n");
+		System.out.println("Escolha o que fazer: \n"
+				  		 + "1. Ligar\n"
+						 + "2. Desligar\n"
+						 + "3. Acelerar\n"
+						 + "4. Frear\n"
+						 + "5. Buzinar.\n"
+						 + "0. Fechar programa\n");
 		
 		while (program) {
 			opc = scan.nextInt();
@@ -34,6 +40,14 @@ public class Main {
 	
 				case 3:
 					meuCarro.acelerar();
+					break;
+					
+				case 4:
+					meuCarro.frear();
+					break;
+					
+				case 5:
+					meuCarro.buzinar();
 					break;
 					
 				case 0:
