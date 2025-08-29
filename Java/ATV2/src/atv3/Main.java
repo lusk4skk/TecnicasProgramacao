@@ -40,7 +40,7 @@ public class Main {
 			}
 		}
 		
-		System.out.println("")
+		System.out.println("");
 		
 		System.out.println("Matriz depois da transposição");
 		for (int L = 0; L < 3; L++) {
