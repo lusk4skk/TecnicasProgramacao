@@ -2,11 +2,19 @@ package atv1;
 
 public class Carro {
 
-    public String cor;
-    public String modelo;
-    public int tanque;
-    public boolean ligado = false;
-    public boolean andando = false;
+    private String modelo;
+    private int ano;
+    public double capacidadeTanque;
+    public double atualTanque;
+    private boolean ligado = false;
+    private boolean andando = false;
+    
+    public Carro(String modelo, int ano, double capacidadeTanque, double atualTanque) {
+        this.modelo = modelo;
+        this.ano = ano;
+        this.capacidadeTanque = capacidadeTanque;
+        this.atualTanque = atualTanque;
+    }
     
     public void ligar() {
     	if (!ligado) {
@@ -29,15 +37,15 @@ public class Carro {
     }
     
     public void acelerar() {
-    	if (ligado && tanque > 0) {
+    	if (ligado && atualTanque > 0) {
                 System.out.println("Carro andando...\n");
                 andando = true;
-                tanque--;
-    	} else if (!ligado && tanque > 0) {
+                atualTanque--;
+    	} else if (!ligado && atualTanque > 0) {
     		System.out.println("O carro está desligado");
     		this.ligar();
     		this.acelerar();
-    	} else if (ligado && tanque == 0) {
+    	} else if (ligado && atualTanque == 0) {
     		System.out.println("Carro sem gasolina! Finalize o programa.\n");
     	} else {
     		this.ligar();
@@ -56,6 +64,47 @@ public class Carro {
     
     public void buzinar() {
     	System.out.println("Biiii! Biiii!\n");
-    	if (andando && tanque > 0) { tanque--; }
+    	if (andando && atualTanque > 0) { atualTanque--; }
+    }
+
+    // Getters e Setters
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    public double getCapacidadeTanque() {
+        return capacidadeTanque;
+    }
+    
+    public double getAtualTanque() {
+        return atualTanque;
+    }
+
+    public void setCapacidadeTanque(double capacidadeTanque) {
+        this.capacidadeTanque = capacidadeTanque;
+    }
+
+    public double calcularValorTotal(double precoGasolina) {
+        return (capacidadeTanque - atualTanque) * precoGasolina;
+    }
+    
+    public void abastecerTanque(double capacidadeTanque, double tanqueAtual) {
+    	this.atualTanque = capacidadeTanque;
+    }
+
+    public void info() {
+        System.out.println("Modelo: " + modelo + "\nAno: " + ano + "\nCapacidade do tanque: " + capacidadeTanque + "L");
     }
 }
