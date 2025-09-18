@@ -1,4 +1,4 @@
-package atv1;
+package atv2;
 import java.util.Scanner;
 
 public class Videolocadora {
@@ -39,7 +39,7 @@ public class Videolocadora {
 		for (int i = 0; i < filmes.length; i++) {
 			faturamento += precoLocacao[i];
 		}
-		System.out.println(faturamento);
+		System.out.println("O faturamento de todos os filmes é de aproximadamente R$" + Math.ceil(faturamento));
 	}
 
 	public void filmeMaisAlugado() {
@@ -69,7 +69,7 @@ public class Videolocadora {
 			System.out.println("\nQual dos filmes listados você quer alugar? (Digite 0 para retornar)");	
 			String alg2;
 			int alg = sc.nextInt() - 1;
-			if (alg == -1) {
+			if (alg != -1) {
 				if (alugado[alg] == true) {
 					System.out.println("Filme já alugado! Escolha outro.");
 				} else {
@@ -109,7 +109,7 @@ public class Videolocadora {
 		System.out.println("\nQue filme você deseja devolver? (0 para retornar)");
 		int alg = sc.nextInt() - 1;
 		
-		if (alg == -1) {
+		if (alg != -1) {
 			System.out.println("Você deseja mesmo devolver " + filmes[alg] + "? S/N\n");
 			String alg2 = sc.next().toUpperCase();
 				switch (alg2) {

@@ -1,58 +1,18 @@
-package atv1;
-import java.util.Scanner;
+/*package atv1;
 
 public class Main {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int opc;
-		boolean program = true;
-		
-		Videolocadora vidloc = new Videolocadora();
-		
-		System.out.println("Bem-vindo(a) à Videolocadora Java!");
-		System.out.println("Escolha uma opção: \n"
-						 + "1. Listar filmes\n"
-						 + "2. Faturamento Total Geral\n"
-						 + "3. Filme mais alugado\n"
-						 + "4. Alugar filme\n"
-						 + "5. Devolver filme\n"
-						 + "0. Encerrar programa\n");
-		
-		while (program) {
-			opc = sc.nextInt();
-			switch (opc) {
-			case 1:
-				vidloc.listar();
-				break;
-				
-			case 2:
-				vidloc.faturamentoTotal();
-				break;
-				
-			case 3:
-				vidloc.filmeMaisAlugado();
-				break;
-			
-			case 4:
-				vidloc.Alugar();
-				break;
-				
-			case 5:
-				vidloc.Devolver();
-				break;
-			
-			case 0:
-				program = false;
-				break;
-				
-			default:
-				System.out.println(opc + " não é uma opção válida!");
-				
-			}
-		}
-		
-		sc.close();
-	}
+    public static void main(String[] args) {
+          Loja lojaDSM = new Loja(3);
+          lojaDSM.setProduto(1, "Teclado", 120, 5);
+          lojaDSM.setProduto(2, "Mouse", 85, 7);
+          lojaDSM.setProduto(3, "Pastel", 12, 50);
+          
+          lojaDSM.getProdutos();
+          System.out.println(lojaDSM.produtosDestaque());
+          System.out.println(lojaDSM.valorTotalEstoque());
+    }
 
 }
+*/
+
